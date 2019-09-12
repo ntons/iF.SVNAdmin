@@ -274,8 +274,8 @@ class LdapUserViewProvider extends \IF_AbstractLdapConnector
 		if ($withStarUser)
 		{
 			$oUAll = new \svnadmin\core\entities\User;
-			$oUAll->id = '*';
-			$oUAll->name = '*';
+			$oUAll->id = '$authenticated';
+			$oUAll->name = '$authenticated';
 			$ret[] = $oUAll;
 		}
 		return $ret;
